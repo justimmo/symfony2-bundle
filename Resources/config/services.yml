@@ -1,0 +1,4 @@
+services:
+    bgcc_justimmo_api:
+        class: Bgcc\Justimmo\Symfony2Bundle\Service\Api
+        arguments: [@service_container]

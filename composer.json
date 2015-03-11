@@ -1,0 +1,22 @@
+{
+  "name": "justimmo/symfony2-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony SonataSymfony2Bundle",
+  "keywords": ["page", "sonata", "cms"],
+  "authors": [
+	{
+	  "name": "Viktor Anga",
+	  "email": "v.anga@bgcc.at"
+	},
+	{
+	  "name": "Bgcc",
+	  "homepage": "bgcc.at"
+	}
+  ],
+  "require": {
+	"justimmo/php-sdk": "1.0.*"
+  },
+  "autoload": {
+	"psr-4": { "Bgcc\\Justimmo\\Symfony2Bundle\\": "" }
+  }
+}
