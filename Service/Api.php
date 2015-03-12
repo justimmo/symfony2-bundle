@@ -34,8 +34,8 @@ class Api
 	{
 		if (!$this->api) {
 			$this->api = new JustimmoApi(
-				$this->container->getParameter('bgcc_justimmo_api.username'),
-				$this->container->getParameter('bgcc_justimmo_api.password'),
+				$this->container->getParameter('bgcc_justimmo_symfony2.username'),
+				$this->container->getParameter('bgcc_justimmo_symfony2.password'),
 				new NullLogger(),
 				new NullCache()
 			);
