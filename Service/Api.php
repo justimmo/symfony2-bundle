@@ -5,9 +5,12 @@ namespace Bgcc\Justimmo\Symfony2Bundle\Service;
 use Justimmo\Api\JustimmoApi;
 use Psr\Log\NullLogger;
 use Justimmo\Model\RealtyQuery;
+use Justimmo\Model\ProjectQuery;
 use Justimmo\Cache\NullCache;
 use Justimmo\Model\Wrapper\V1\RealtyWrapper;
+use Justimmo\Model\Wrapper\V1\ProjectWrapper;
 use Justimmo\Model\Mapper\V1\RealtyMapper;
+use Justimmo\Model\Mapper\V1\ProjectMapper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class Api
@@ -45,13 +48,20 @@ class Api
 
 	}
 
-	public function getQuery()
+	public function getRealtyQuery()
 	{
 		$mapper = new RealtyMapper();
 		$wrapper = new RealtyWrapper($mapper);
 
 		return new RealtyQuery($this->getApi(), $wrapper, $mapper);
 	}
+
+    public function getProjectQuery()
+    {
+        $mapper = new ProjectMapper();
+        $wrapper = new ProjectWrapper($mapper);
+        return new ProjectQuery($this->getApi(), $wrapper, $mapper);
+    }
 
 	/**
 	 * Get employee list
